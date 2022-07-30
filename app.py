@@ -25,4 +25,4 @@ def predict():
   prediction = model.predict([[exp1,exp2,exp3,exp4,exp5,exp6]])
   return render_template('model2.html', prediction_text='Regression Model  has predicted Price for the House : {}'.format(prediction))
 if __name__ == "__main__":
-    app.run(debug=True)
+  app.run(debug=True)
