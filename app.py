@@ -5,7 +5,7 @@ import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('lr_assignment2.pkl','rb')) 
+model = pickle.load(open('house_predict.pkl','rb')) 
 #run_with_ngrok(app)
 
 @app.route('/')
