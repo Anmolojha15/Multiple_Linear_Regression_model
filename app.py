@@ -11,7 +11,7 @@ model = pickle.load(open('house_predict.pkl','rb'))
 @app.route('/')
 def home():
   
-    return render_template("index.html")
+    return render_template("model2.html")
   
   
 @app.route('/pr',methods=['GET'])
@@ -23,6 +23,6 @@ def predict():
   exp5 = float(request.args.get('exp5'))
   exp6 = float(request.args.get('exp6'))
   prediction = model.predict([[exp1,exp2,exp3,exp4,exp5,exp6]])
-  return render_template('index.html', prediction_text='Regression Model  has predicted Price for the House : {}'.format(prediction))
+  return render_template('model2.html', prediction_text='Regression Model  has predicted Price for the House : {}'.format(prediction))
 if __name__ == "__main__":
     app.run(debug=True)
